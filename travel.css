@@ -33,6 +33,11 @@ nav{
     color: white;
     margin-left: 10px;
 }
+nav .empty{
+    width:294px ;
+}
+
+
 
 .ancors{
     display: flex;
