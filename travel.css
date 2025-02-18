@@ -12,7 +12,22 @@ nav{
 }
 .navheading_container{
     display: flex;
+    align-items: center;
 }
+.navheading_container > img{
+    width: 30px;
+}
+
+
 .input_container{
     display: flex;
+    align-items: center;
+}
+.input_container > img{
+    width: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
