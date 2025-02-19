@@ -139,3 +139,67 @@ a{
     padding: 20px;
     border-radius: 10px;
 }
+.about_container2{
+    display: flex;
+    margin-left: 300px;
+    margin-top: 50px;
+    gap: 15px;
+}
+.team{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 50px;
+}
+.about_container2 > div{
+    background-color:  rgba(0, 0, 0, 0.362);
+    padding: 10px;
+    border-radius: 10px;
+}
+.about_name{
+    color: white;
+}
+.about_dis{
+    color: rgb(167, 166, 166);
+}
+.about_posi{
+    background-color: rgb(39, 67, 133);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 50px 3px 50px;
+    margin-top: 5px;
+
+}
+
+
+
+
+.form_container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.form_container h1{
+    color: white;
+    font-size: 4rem;
+    padding-bottom: 100px;
+}
+.form_container form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.362);
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    margin-left: 70px;
+}
+.form_container form label{
+    color: white;
+}
+.form_container form input{
+    background-color: rgba(0,0,0,0);
+    border: 1px solid rgb(142, 142, 142);
+}
