@@ -120,3 +120,22 @@ a{
     left: 18px;
     border-radius: 1px;
 }
+
+
+
+.about_heading{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.about_content{
+    color: white;
+    margin-left: 100px;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.362);
+    width: 1000px;
+    padding: 20px;
+    border-radius: 10px;
+}
