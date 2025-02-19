@@ -184,7 +184,7 @@ a{
 .form_container h1{
     color: white;
     font-size: 4rem;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 .form_container form{
     display: flex;
@@ -192,9 +192,10 @@ a{
     background-color: rgba(0, 0, 0, 0.362);
     padding: 10px;
     border-radius: 10px;
-    width: 400px;
-    height: 300px;
+    width: 600px;
+    /* height: 300px; */
     margin-left: 70px;
+    gap: 10px;
 }
 .form_container form label{
     color: white;
@@ -202,4 +203,17 @@ a{
 .form_container form input{
     background-color: rgba(0,0,0,0);
     border: 1px solid rgb(142, 142, 142);
+    min-height: 30px;
+}
+.form_container form textarea{
+    background-color: rgba(0,0,0,0);
+    border: 1px solid rgb(142, 142, 142);
+    min-height: 160px;
+}
+.form_container form button{
+    background-color: rgb(1, 117, 121);
+    border: none;
+    border-radius: 7px;
+    margin-top: 5px;
+    padding: 5px;
 }
