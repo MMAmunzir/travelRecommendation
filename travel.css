@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: linear-gradient(to right, rgba(2, 117, 124, 0.8), rgba(255, 255, 255, 0)),url('./manhaten.png');
+    background: linear-gradient(to right, rgba(2, 117, 124, 0.8), rgba(255, 255, 255, 0)),url('./images/manhaten.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
