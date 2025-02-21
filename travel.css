@@ -217,3 +217,14 @@ a{
     margin-top: 5px;
     padding: 5px;
 }
+
+
+
+.allsearch_container{
+    position: absolute;
+    background-color: white;
+    width: 400px;
+    height: 800px;
+    top: 100px;
+    right: 50px;
+}
