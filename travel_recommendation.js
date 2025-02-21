@@ -15,19 +15,15 @@ searchResults.innerHTML ='';
         })
         });
 
-        // searchResults.innerHTML=searchContent;
-
     }else if(input.toLowerCase().includes("temple")){
         data.temples.forEach(element => {
-            searchContent += `<div class="card"> <img src=${element.imageUrl} alt=${element.name}/><div><h4>${element.name}</h4><p>${element.description}</p><button>Visit</button></div></div>`
+            searchResults.innerHTML += `<div class="card"> <img src=${element.imageUrl} alt=${element.name}/><div><h4>${element.name}</h4><p>${element.description}</p><button>Visit</button></div></div>`
         })
-        searchResults.innerHTML=searchContent;
 
     }else if(input.toLowerCase().includes("beach")){
         data.beaches.forEach(element => {
-            searchContent += `<div class="card"> <img src=${element.imageUrl} alt=${element.name}/><div><h4>${element.name}</h4><p>${element.description}</p><button>Visit</button></div></div>`
+            searchResults.innerHTML += `<div class="card"> <img src=${element.imageUrl} alt=${element.name}/><div><h4>${element.name}</h4><p>${element.description}</p><button>Visit</button></div></div>`
         })
-        searchResults.innerHTML=searchContent;
     }else{
         alert("Search valid keyword")
     }
@@ -35,9 +31,9 @@ searchResults.innerHTML ='';
 
 
 function clearSearch(){
-    const input = document.getElementById('keyword')
+    const inputelement = document.getElementById('keyword')
     const searchResults= document.getElementById('allsearch_container')
     searchResults.innerHTML ='';
-    input.value= ''
+    inputelement.value= ''
 
 }
