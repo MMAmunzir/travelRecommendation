@@ -3,12 +3,11 @@ function search(){
 const input = document.getElementById('keyword').value.trim();
 const searchResults= document.getElementById('allsearch_container')
 searchResults.innerHTML ='';
-let searchContent=' '
 
  fetch('./travel_recommendation_api.json')
      .then(res => res.json())
      .then(data => {
-        
+
     if(input.toLowerCase().includes("country")){
         data.countries.forEach(element => { element.cities.forEach(item =>{
 
@@ -30,6 +29,15 @@ let searchContent=' '
         })
         searchResults.innerHTML=searchContent;
     }else{
-        console.log("entered is not in data base")
+        alert("Search valid keyword")
     }
      })}
+
+
+function clearSearch(){
+    const input = document.getElementById('keyword')
+    const searchResults= document.getElementById('allsearch_container')
+    searchResults.innerHTML ='';
+    input.value= ''
+
+}
