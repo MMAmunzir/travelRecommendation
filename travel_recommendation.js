@@ -2,33 +2,31 @@
 function search(){
 const input = document.getElementById('keyword').value.trim();
 const searchResults= document.getElementById('allsearch_container')
-const searchContent=''
+searchResults.innerHTML ='';
+let searchContent=' '
 
  fetch('./travel_recommendation_api.json')
      .then(res => res.json())
      .then(data => {
-        const condition1 = data.countries.find(item => item.name.toLowerCase() === input.toLowerCase());
-        const condition2 = data.temples.find(item => item.name.toLowerCase() === input.toLowerCase());
-        const condition3 = data.beaches.find(item => item.name.toLowerCase() === input.toLowerCase());
-
-    if(condition1){
+        
+    if(input.toLowerCase().includes("country")){
         data.countries.forEach(element => { element.cities.forEach(item =>{
 
-            searchContent += `<div> <img src=${item.imageUrl}/><div><h4>${item.name}</h4><p>${item.description}</p><button>Visit</button></div></div>`
+            searchResults.innerHTML += `<div class="card"> <img src=${item.imageUrl} alt=${item.name}/><div><h4>${item.name}</h4><p>${item.description}</p><button>Visit</button></div></div>`
         })
         });
 
-        searchResults.innerHTML=searchContent;
+        // searchResults.innerHTML=searchContent;
 
-    }else if(condition2){
+    }else if(input.toLowerCase().includes("temple")){
         data.temples.forEach(element => {
-            searchContent += `<div> <img src=${element.imageUrl}/><div><h4>${element.name}</h4><p>${element.description}</p><button>Visit</button></div></div>`
+            searchContent += `<div class="card"> <img src=${element.imageUrl} alt=${element.name}/><div><h4>${element.name}</h4><p>${element.description}</p><button>Visit</button></div></div>`
         })
         searchResults.innerHTML=searchContent;
 
-    }else if(condition3){
+    }else if(input.toLowerCase().includes("beach")){
         data.beaches.forEach(element => {
-            searchContent += `<div> <img src=${element.imageUrl}/><div><h4>${element.name}</h4><p>${element.description}</p><button>Visit</button></div></div>`
+            searchContent += `<div class="card"> <img src=${element.imageUrl} alt=${element.name}/><div><h4>${element.name}</h4><p>${element.description}</p><button>Visit</button></div></div>`
         })
         searchResults.innerHTML=searchContent;
     }else{

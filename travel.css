@@ -220,11 +220,58 @@ a{
 
 
 
-.allsearch_container{
+#allsearch_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     position: absolute;
-    background-color: white;
-    width: 400px;
-    height: 800px;
-    top: 100px;
+    /* background-color: white; */
+    width: 415px;
+    max-height: 600px;
+    top: 80px;
     right: 50px;
+    overflow-y: auto;
+    border-radius: 3px;
+    padding: 10px;
+
+
+}
+#allsearch_container::-webkit-scrollbar {
+    width: 2px; /* Thin scrollbar */
+}
+
+#allsearch_container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scroll thumb color */
+    border-radius: 5px; /* Rounded edges */
+}
+
+#allsearch_container::-webkit-scrollbar-track {
+    background: transparent; /* Track background */
+}
+
+.card{
+    width: 100%;
+    box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.362);
+    border-radius: 10px;
+}
+.card img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.card div{
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+}
+.card div p{
+    color: rgb(91, 91, 91);
+    font-size: small;
+}
+.card div button{
+    background-color:rgb(0, 120, 120) ;
+    padding: 8px 12px 8px 12px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: .65rem;
 }
